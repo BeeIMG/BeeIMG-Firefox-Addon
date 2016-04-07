@@ -1,0 +1,18 @@
+{
+  "title": "BeeIMG Firefox Uploader",
+  "name": "beeimg_firefox",
+  "version": "0.1.0",
+  "description": "Upload Images to BeeIMG easily",
+  "main": "index.js",
+  "author": "BeeIMG",
+  "homepageURL": "https://beeimg.com/",
+  "id": "admin@beeimg.com",
+  "icon": "resource://@beeimg_firefox/data/bee48.png",
+  "engines": {
+    "firefox": ">=38.0a1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "beeimg"
+  ]
+}
