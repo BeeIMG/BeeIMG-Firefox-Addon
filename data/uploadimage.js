@@ -6,12 +6,12 @@ self.on("click", function () {
 	var xhr = new XMLHttpRequest();
 	xhr.open("POST", url + "/api/upload/url/json/", true);
 	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	xhr.send("url=" + text + "&addon=firefox&version=t0.0.1");
+	xhr.send("url=" + text + "&addon=firefox&version=0.1.0");
 	xhr.onreadystatechange = function () {
 	   if (xhr.readyState == 4) {
                 var json = JSON.parse(xhr.responseText);
                 if (json.files.code == 200) {
-					self.postMessage(JSON.stringify({text:"Image successfully uploaded. Image link copied to clipboard. Click this notification to open the image view page.", clip:"URL", img_url:json.files.url, url:json.files.view_url, icon:json.files.thumbnail_url}));
+					self.postMessage(JSON.stringify({text:"Image successfully uploaded and link copied to clipboard. Click this notification to open the image view page.", clip:"URL", img_url:json.files.url, url:json.files.view_url, icon:json.files.thumbnail_url}));
                 } else self.postMessage(JSON.stringify({text:"Error "+json.files.status+"", icon:"default"}));
             }
 	}
